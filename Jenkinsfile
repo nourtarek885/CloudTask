@@ -1,5 +1,8 @@
 pipeline {
   agent any // runs the job on any available Jenkins agent
+  tools {
+    nodejs "node18"
+  }
   stages {
     stage('Install') {
       steps {
@@ -16,3 +19,4 @@ pipeline {
     }
   }
 }
+
